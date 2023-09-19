@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { getStaticProps } from  "./utils/getStaticProps";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  getStaticProps().then(res => console.log(res.props.products[2].image.url))
+     
+
+    return (
+      <button>button</button>
+    )
+  
+  // return (
+  //   <div className="App">
+
+
+  //     {products.map((product) => (
+  //       <div key={product.id}>
+  //         <img src={product.media.source} alt={product.name} />
+  //       </div>
+         
+  //     ))}
+  //   </div>
+  // );
 }
 
 export default App;
